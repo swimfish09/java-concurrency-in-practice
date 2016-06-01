@@ -17,9 +17,10 @@ public class Test implements Runnable {
 	public static void main(String[] args) throws InterruptedException {
 		Sequence sequence = new Sequence();
 		// UnsafeSequence sequence = new UnsafeSequence();
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 30; i++) {
 			Thread thread = new Thread(new Test(sequence));
 			thread.start();
 		}
+		//System.out.println(Thread.activeCount());
 	}
 }
